@@ -21,11 +21,12 @@ namespace HotelApplicationss.Controllers
             string lon = longitude.ToString();
             string line = null;
             List<string> hotel = new List<string>();
-          
+            // string ur = "https://maps.googleapis.com/maps/api/place/autocomplete/xml?input=" + name + "&types=geocode&language=en&key=AIzaSyAFAfIYYn-j8qsBgk8j4f3RWXEvlJZIhvI";
             string url = "https://maps.googleapis.com/maps/api/place/nearbysearch/xml?location=" + lat + "," + lon + "&radius=1500&type=hotel&keyword=cruise&key=AIzaSyAbAfnZkuWEBuneMJUafr8h2_fpvMm48is";
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(url);
             XmlNodeList elementList = xmldoc.GetElementsByTagName("name");
+           
             //hotel.Add(elementList[0].InnerXml);
 
 
